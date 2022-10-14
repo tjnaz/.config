@@ -1,0 +1,17 @@
+require("anaz.base")
+require("anaz.keymaps")
+require("anaz.plugins")
+require("anaz.tokyonight")
+--require("highlights")
+
+local has = function(x)
+	return vim.fn.has(x) == 1
+end
+
+local is_mac = has("macunix")
+-- Including the .lua for Windows OS even thuough I'm currently on MacOs
+local is_win = has("win32")
+
+if is_mac then
+	require("anaz.macos")
+end
