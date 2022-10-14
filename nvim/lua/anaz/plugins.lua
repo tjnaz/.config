@@ -89,10 +89,10 @@ return packer.startup(function(use)
   --	use("windwp/nvim-ts-autotag")
 
   --- FORMATTER/TREESITTER/---
-  --	use({
-  --		"nvim-treesitter/nvim-treesitter",
-  --		run = ":TSUpdate",
-  --	})
+  	use({
+  		"nvim-treesitter/nvim-treesitter",
+  		run = ":TSUpdate",
+  	})
   --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   use("windwp/nvim-autopairs")
   --
