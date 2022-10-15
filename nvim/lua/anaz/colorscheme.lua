@@ -1,71 +1,32 @@
-local status, tokyo = pcall(require, "tokyonight")
+local status, n = pcall(require, "neosolarized")
 if (not status) then return end
 
-tokyo.setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-  light_style = "day", -- The theme is used when the background is set to light
-  transparent = true, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = true},
-    keywords = {},
-    functions = {italic = true},
-    variables = {},
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "transparent", -- style for sidebars, see below
-    floats = "transparent", -- style for floating windows
-  },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  dim_inactive = true, -- dims inactive windows
-  lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
-  lualine_italic = true,
-
-  --- You can override specific color groups to use other groups or a hex color
-  --- function will be called with a ColorScheme table
-  ---@param colors ColorScheme
-  on_colors = function(colors) end,
-
-  --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
+n.setup({
+  comment_italics = true,
 })
 
-vim.cmd([[colorscheme tokyonight-night]])
+local cb = require('colorbuddy.init')
+local Color = cb.Color
+local colors = cb.colors
+local Group = cb.Group
+local groups = cb.groups
+local styles = cb.styles
 
--- Cursor
---vim.opt.guicursor = 'n-v-c:block-Cursor,i:ver25-iCursor,a:blinkon1'
-vim.cmd [[highlight Cursor guifg=NONE guibg=#BFBFBF]] -- cursor background
-----
---vim.cmd([[hi ColorColumn guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi Comment gui=italic]])
---vim.cmd([[hi Conceal guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi CursorColumn guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi DiffAdd guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi DiffChange guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi DiffDelete guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi Directory guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi EndOfBuffer guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi Folded guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi LineNr guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi NonText guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi NormalFloat guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi SignColumn guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi SpecialKey guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TabLine guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TabLineFill guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TabLineSel guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TelescopeNormal guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TelescopePromptNormal guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi TelescopeSelection guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi Terminal guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi VertSplit guibg=NONE ctermbg=NONE]])
---vim.cmd([[hi WildMenu guibg=NONE]])
+Color.new('black', '#000000')
+Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
+Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
+Group.new('Visual', colors.none, colors.base03, styles.reverse)
+
+local cError = groups.Error.fg
+local cInfo = groups.Information.fg
+local cWarn = groups.Warning.fg
+local cHint = groups.Hint.fg
+
+Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
+Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
+Group.new("DiagnosticVirtualTextWarn", cWarn, cWarn:dark():dark():dark(), styles.NONE)
+Group.new("DiagnosticVirtualTextHint", cHint, cHint:dark():dark():dark(), styles.NONE)
+Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl, cError)
+Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
+Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
+Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)

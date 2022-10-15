@@ -47,21 +47,19 @@ return packer.startup(function(use)
 
   --- COLORSCHEMES ---
   use({ "folke/tokyonight.nvim" })
-  --	use({
-  --		"svrana/neosolarized.nvim",
-  --		requires = { "tjdevries/colorbuddy.nvim" },
-  --	})
-  --  use("norcalli/nvim-colorizer.lua")
+  	use({
+  		"svrana/neosolarized.nvim",
+  		requires = { "tjdevries/colorbuddy.nvim" },
+  	})
+    use("norcalli/nvim-colorizer.lua")
 
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
   -- use 'akinsho/nvim-bufferline.lua'
   use("kyazdani42/nvim-web-devicons")
-  use("moll/vim-bbye")
-
-  --- LUA LINE ---
   use("hoob3rt/lualine.nvim") -- The cool part i.e the status line.
+  use("moll/vim-bbye")
 
   --- CMP PLUGINS ---
   use("hrsh7th/nvim-cmp") -- Completion
@@ -83,9 +81,7 @@ return packer.startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
-  --	use("glepnir/lspsaga.nvim")
   --	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
-  --	use("onsails/lspkind.nvim") -- vscode-like pictograms
   --	use("windwp/nvim-ts-autotag")
 
   --- FORMATTER/TREESITTER/---
@@ -93,8 +89,11 @@ return packer.startup(function(use)
   		"nvim-treesitter/nvim-treesitter",
   		run = ":TSUpdate",
   	})
-  --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
+  use("lukas-reineke/indent-blankline.nvim")
   use("windwp/nvim-autopairs")
+	use( "numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+  --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   --
   --	--- GIT ---
   --	use("lewis6991/gitsigns.nvim")

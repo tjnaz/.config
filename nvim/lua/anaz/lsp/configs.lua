@@ -15,7 +15,7 @@ mason.setup({
 })
 
 local lspconfig = require("lspconfig")
-local servers = {"sumneko_lua", "quick_lint_js", "jsonls", "tsserver", "emmet_ls", "cssls", "cssmodules_ls", "html"}
+local servers = {"sumneko_lua", "denols", "tsserver", "emmet_ls", "cssls", "cssmodules_ls", "html"}
 
 lsp_installer.setup({
   ensure_installed = servers,
