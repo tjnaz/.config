@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -31,10 +30,10 @@ keymapOld.set("n", "TV", ":vsplit<Return>", term_opts)
 
 -- Normal --
 -- Better window navigation
-keymap("n", "TH", "<C-w>h", opts)
-keymap("n", "TJ", "<C-w>j", opts)
-keymap("n", "TK", "<C-w>k", opts)
-keymap("n", "TL", "<C-w>l", opts)
+keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-j>", "<C-w>j", opts)
+keymap("n", "<A-k>", "<C-w>k", opts)
+keymap("n", "<A-l>", "<C-w>l", opts)
 -- Resize with arrows
 keymap("n", "T<up>", ":resize +2<CR>", opts) -- Changed this 3/18 08:00
 keymap("n", "T<down>", ":resize -2<CR>", opts)
@@ -47,8 +46,8 @@ keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- It should be in visual mode + there's no ==gi 3/18 @ 11:17
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+-- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- It should be in visual mode + there's no ==gi 3/18 @ 11:17
+-- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press JJ fast to exit insert mode
@@ -91,4 +90,7 @@ keymap("n", "<C-a>", "gg<S-v>G", opts)
 keymap("n", "<Leader>a", ":%y<CR>", opts)
 
 --- Remove the highlights after search
-keymap("n", "<CR>", ":noh<CR><CR>", opts)
+keymap("n", "<CR>", ":noh<CR><ESC>", opts)
+
+--- Oen and close Nvim-Tree
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)

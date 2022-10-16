@@ -82,8 +82,8 @@ return packer.startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
-  --	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
-  --	use("windwp/nvim-ts-autotag")
+  use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
+  use("windwp/nvim-ts-autotag")
 
   --- FORMATTER/TREESITTER/---
   use({
@@ -94,7 +94,7 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs")
   use( "numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
-  --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
+  use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   --
   --	--- GIT ---
   -- use("dinhhuy258/git.nvim")
