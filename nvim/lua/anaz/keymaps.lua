@@ -89,3 +89,6 @@ keymap("n", "_", "<C-x>", opts)
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G", opts)
 keymap("n", "<Leader>a", ":%y<CR>", opts)
+
+--- Remove the highlights after search
+keymap("n", "<CR>", ":noh<CR><CR>", opts)

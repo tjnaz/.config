@@ -96,8 +96,8 @@ return packer.startup(function(use)
   --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   --
   --	--- GIT ---
-  --	use("lewis6991/gitsigns.nvim")
-  --	use("dinhhuy258/git.nvim")
+  -- use("dinhhuy258/git.nvim")
+  use("lewis6991/gitsigns.nvim")
 
   --- OTHERS/MISC ---
   --- WAKATIME ---
@@ -110,4 +110,7 @@ return packer.startup(function(use)
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   })
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
 end)
