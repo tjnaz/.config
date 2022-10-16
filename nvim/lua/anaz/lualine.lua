@@ -50,5 +50,5 @@ lualine.setup {
       },
     },
   },
-  extensions = { 'fugitive' }
+  -- extensions = { 'gitsigns' }
 }

@@ -45,6 +45,7 @@ gitsigns.setup {
   yadm = {
     enable = false,
   },
+  -- Keymaps
   on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
 
