@@ -47,11 +47,11 @@ return packer.startup(function(use)
 
   --- COLORSCHEMES ---
   use({ "folke/tokyonight.nvim" })
-  	use({
-  		"svrana/neosolarized.nvim",
-  		requires = { "tjdevries/colorbuddy.nvim" },
-  	})
-    use("norcalli/nvim-colorizer.lua")
+  use({
+    "svrana/neosolarized.nvim",
+    requires = { "tjdevries/colorbuddy.nvim" },
+  })
+  use("norcalli/nvim-colorizer.lua")
 
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use("kyazdani42/nvim-web-devicons")
   use("hoob3rt/lualine.nvim") -- The cool part i.e the status line.
   use("moll/vim-bbye")
+  use("kyazdani42/nvim-tree.lua")
 
   --- CMP PLUGINS ---
   use("hrsh7th/nvim-cmp") -- Completion
@@ -85,14 +86,14 @@ return packer.startup(function(use)
   --	use("windwp/nvim-ts-autotag")
 
   --- FORMATTER/TREESITTER/---
-  	use({
-  		"nvim-treesitter/nvim-treesitter",
-  		run = ":TSUpdate",
-  	})
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  })
   use("lukas-reineke/indent-blankline.nvim")
   use("windwp/nvim-autopairs")
-	use( "numToStr/Comment.nvim")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
+  use( "numToStr/Comment.nvim")
+  use("JoosepAlviste/nvim-ts-context-commentstring")
   --	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   --
   --	--- GIT ---
@@ -110,7 +111,7 @@ return packer.startup(function(use)
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   })
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
 end)
