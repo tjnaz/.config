@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -197,6 +202,11 @@ _G.packer_plugins = {
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
@@ -232,6 +242,11 @@ _G.packer_plugins = {
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -251,6 +266,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-wakatime"] = {
     loaded = true,

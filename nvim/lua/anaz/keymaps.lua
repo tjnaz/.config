@@ -61,7 +61,7 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+-- keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -94,3 +94,13 @@ keymap("n", "<CR>", ":noh<CR><ESC>", opts)
 
 --- Oen and close Nvim-Tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+
+--- Open/close floaterm
+keymap("n", "<Leader>g", ":FloatermNew lazygit<CR>", opts)
+--- Open projects
+keymap("n", "<Leader>P", ":Telescope projects<CR>JJ", opts)
+--- greatest remap ever from ThePrimegan
+keymap("n", "<Leader>p", "\"_dP", opts)
+keymap("v", "<Leader>p", "\"_dP", opts)
+keymap("x", "<Leader>p", "\"_dP", opts)
+keymap("x", "<Leader>p", "\"_dP", opts)

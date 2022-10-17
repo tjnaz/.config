@@ -44,7 +44,8 @@ return packer.startup(function(use)
   use("wbthomason/packer.nvim")
   use("nvim-lua/plenary.nvim") -- Common utilities
   use("nvim-lua/popup.nvim")
-
+  use("voldikss/vim-floaterm")
+  use("lewis6991/impatient.nvim")
   --- COLORSCHEMES ---
   use({ "folke/tokyonight.nvim" })
   use({
@@ -52,7 +53,9 @@ return packer.startup(function(use)
     requires = { "tjdevries/colorbuddy.nvim" },
   })
   use("norcalli/nvim-colorizer.lua")
-
+  use({
+    "ahmedkhalf/project.nvim",
+  })
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
@@ -77,11 +80,11 @@ return packer.startup(function(use)
   --use("folke/lua-dev.nvim")
 
   --- LSP ---
-  use {
+  use({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-  }
+  })
   use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
   use("windwp/nvim-ts-autotag")
 
@@ -90,9 +93,10 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   })
+  use('nvim-treesitter/nvim-treesitter-context')
   use("lukas-reineke/indent-blankline.nvim")
   use("windwp/nvim-autopairs")
-  use( "numToStr/Comment.nvim")
+  use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
   --
