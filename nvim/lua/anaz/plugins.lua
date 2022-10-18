@@ -53,17 +53,16 @@ return packer.startup(function(use)
     requires = { "tjdevries/colorbuddy.nvim" },
   })
   use("norcalli/nvim-colorizer.lua")
-  use({
-    "ahmedkhalf/project.nvim",
-  })
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
-  -- use 'akinsho/nvim-bufferline.lua'
   use("kyazdani42/nvim-web-devicons")
   use("hoob3rt/lualine.nvim") -- The cool part i.e the status line.
   use("moll/vim-bbye")
   use("kyazdani42/nvim-tree.lua")
+  use({
+    "ahmedkhalf/project.nvim",
+  })
 
   --- CMP PLUGINS ---
   use("hrsh7th/nvim-cmp") -- Completion
@@ -77,7 +76,6 @@ return packer.startup(function(use)
   --- SNIPPETS ---
   use("L3MON4D3/LuaSnip") -- Snippet
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-  --use("folke/lua-dev.nvim")
 
   --- LSP ---
   use({
