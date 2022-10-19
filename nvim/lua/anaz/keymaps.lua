@@ -37,8 +37,8 @@ keymap("n", "<A-l>", "<C-w>l", opts)
 -- Resize with arrows
 keymap("n", "TK", ":resize +2<CR>", opts) -- Changed this 3/18 08:00
 keymap("n", "TJ", ":resize -2<CR>", opts)
-keymap("n", "TH", ":vertical resize -2<CR>", opts)
-keymap("n", "TL", ":vertical resize +2<CR>", opts)
+keymap("n", "TL", ":vertical resize -2<CR>", opts)
+keymap("n", "TH", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<Tab>", ":bnext<CR>", opts)

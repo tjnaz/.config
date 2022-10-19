@@ -11,12 +11,11 @@ null_ls.setup({
   sources = {
     formatting.stylua.with({
       args = {
-        -- indent_type = "Spaces",
-        -- indent_width = 4,
-        quote_style = "ForceDouble",
+        quote_style = 'ForceDouble',
       },
     }),
     formatting.prettierd,
+    formatting.jq,
     diagnostics.fish,
   },
   on_attach = function(client, bufnr)

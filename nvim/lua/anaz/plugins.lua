@@ -113,6 +113,11 @@ return packer.startup(function(use)
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   })
+  --- For API previews
+  use({
+    "NTBBloodbath/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+  })
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
