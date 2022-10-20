@@ -95,9 +95,16 @@ keymap("n", "<CR>", ":noh<CR><ESC>", opts)
 --- Oen and close Nvim-Tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
+--- FLOATERM ---
 --- Open/close floaterm
 keymap("n", "<Leader>g", ":FloatermNew lazygit<CR>", opts)
 --- Open projects
+
+--- Clang & Make Compiling
+keymap("n", "<Leader><Leader>cr", ":FloatermNew --autoclose=0 clang % -o %< && ./%<<CR>", opts)
+keymap("n", "<Leader><Leader>s", ":FloatermNew --silent --name=server live-server --cors --open=%<CR>", opts)
+keymap("n", "<Leader><Leader>ks", ":FloatermKill server<CR>", opts)
+
 keymap("n", "<Leader>P", ":Telescope projects<CR>JJ", opts)
 --- greatest remap ever from ThePrimegan
 keymap("n", "<Leader>p", "\"_dP", opts)
