@@ -76,7 +76,7 @@ end)
 vim.keymap.set("n", ";g", function()
   builtin.git_commits()
 end)
-vim.keymap.set("n", "LF", function()
+vim.keymap.set({ "v", "n" }, "LF", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
@@ -88,4 +88,3 @@ vim.keymap.set("n", "LF", function()
     layout_config = { height = 40 },
   })
 end)
-

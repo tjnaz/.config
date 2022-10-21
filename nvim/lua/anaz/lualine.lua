@@ -5,6 +5,7 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'solarized_dark',
+    -- normal_c_bg = 'None',
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = {}
@@ -19,7 +20,7 @@ lualine.setup {
     } },
     lualine_x = {
       { 'diagnostics', sources = { 'nvim_diagnostic' }, symbols = { error = " ", warn = " ", hint = " ",
-      info = " " } },
+        info = " " } },
       'encoding',
       'file',
       'filetype'
@@ -50,5 +51,5 @@ lualine.setup {
       },
     },
   },
-  -- extensions = { 'gitsigns' }
+  -- extensions = { 'gitsigns' },
 }

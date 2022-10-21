@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
   ["live-server.nvim"] = {
     commands = { "LiveServer", "LiveServerStart", "LiveServerStop" },
     loaded = false,

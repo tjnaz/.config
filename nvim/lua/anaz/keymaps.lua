@@ -5,7 +5,7 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- From the old config
-local keymapOld = vim.keymap
+-- local keymapOld = vim.keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -22,11 +22,11 @@ vim.g.maplocalleader = " "
 
 -- From the current config
 -- New tab
-keymapOld.set("n", "TE", ":tabedit<Return>", term_opts)
+keymap("n", "TE", ":tabedit<Return>", term_opts)
 -- Need to find keymap for closing tabedit windows and split panes --
 -- Split window
-keymapOld.set("n", "TS", ":split<Return>", term_opts)
-keymapOld.set("n", "TV", ":vsplit<Return>", term_opts)
+keymap("n", "TS", ":split<Return>", term_opts)
+keymap("n", "TV", ":vsplit<Return>", term_opts)
 
 -- Normal --
 -- Better window navigation
@@ -45,9 +45,6 @@ keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
--- Move text up and down
--- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- It should be in visual mode + there's no ==gi 3/18 @ 11:17
--- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press JJ fast to exit insert mode
@@ -72,10 +69,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- From the current config
 

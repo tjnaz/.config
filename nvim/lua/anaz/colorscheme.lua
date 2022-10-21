@@ -13,8 +13,13 @@ local groups = cb.groups
 local styles = cb.styles
 
 Color.new('black', '#000000')
-Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
-Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
+Color.new('nontext', '#212223')
+Color.new('cursorline', '#001100')
+Color.new('cursor', '#0F0')
+Group.new('Cursor', cursor)
+Group.new('NonText', colors.nontext)
+Group.new('CursorLine', colors.none, colors.none, styles.undercurl, colors.base3)
+Group.new('CursorLineNr', colors.yellow, colors.black, styles.bold, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
 
 local cError = groups.Error.fg
