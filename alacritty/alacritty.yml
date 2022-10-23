@@ -5,9 +5,9 @@ shell:
 font:
   size: 16
   offset:
-    y: 1
+    y: 0
   normal:
-    family: "Input Mono"
+    family: "FiraCode Nerd Font"
   italic:
     family: "Cascadia Code"
   AppleFontSmoothing: true
