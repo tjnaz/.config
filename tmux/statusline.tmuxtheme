@@ -41,7 +41,7 @@ set -gqF @themepack-window-status-current-format "#{@themepack-window-status-cur
 set -gqF @themepack-window-status-format "#{@themepack-window-status-prefix}#{@themepack-window-status-format}#{@themepack-window-status-suffix}"
 
 # Theme options
-set -goq  @theme-clock-mode-colour red
+set -goq  @theme-clock-mode-colour colour24 
 set -goq  @theme-clock-mode-style 24
 set -goq  @theme-display-panes-active-colour default
 set -goq  @theme-display-panes-colour default
