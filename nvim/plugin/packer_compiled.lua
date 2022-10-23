@@ -142,6 +142,11 @@ _G.packer_plugins = {
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/opt/live-server.nvim",
     url = "https://github.com/aurum77/live-server.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/anaz/.local/share/nvim/site/pack/packer/start/lualine.nvim",

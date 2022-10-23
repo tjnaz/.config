@@ -3,7 +3,7 @@ local options = {
   backspace = "start,eol,indent",
   backupskip = "/tmp/*,/private/tmp/*",
   breakindent = true,
-  cmdheight = 2,
+  cmdheight = 1,
   encoding = "utf-8",
   expandtab = true,
   fileencoding = "utf-8",
@@ -73,6 +73,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 vim.cmd("set lcs=leadmultispace:\\|.")
 --vim.cmd("set highlight NonText ctermfg=16 guifg=#212121")
+vim.cmd("set laststatus=0")
 
 -- Add asterisk in block comments
 vim.opt.formatoptions:append({ "r" })

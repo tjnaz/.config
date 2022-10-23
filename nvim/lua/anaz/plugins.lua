@@ -85,7 +85,7 @@ return packer.startup(function(use)
   })
   use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
   use("windwp/nvim-ts-autotag")
-
+  use('folke/lsp-colors.nvim')
   --- FORMATTER/TREESITTER/---
   use({
     "nvim-treesitter/nvim-treesitter",

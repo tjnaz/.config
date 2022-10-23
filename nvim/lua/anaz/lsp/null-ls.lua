@@ -19,7 +19,7 @@ null_ls.setup({
     formatting.prettierd,
     formatting.jq,
     diagnostics.fish,
-    diagnostics.cppcheck,
+    -- diagnostics.cppcheck,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

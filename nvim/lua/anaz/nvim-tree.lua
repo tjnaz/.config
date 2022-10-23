@@ -54,7 +54,8 @@ nvim_tree.setup {
     },
   },
   view = {
-    width = 30,
+    -- width = 30,
+    adaptive_size = true,
     side = "left",
     mappings = {
       list = {
@@ -63,7 +64,7 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
-    number = false,
-    relativenumber = false,
+    number = true,
+    relativenumber = true,
   },
 }
