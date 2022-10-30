@@ -20,7 +20,7 @@ fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/bin/git
 
 # fish colors
-set -U fish_color_autosuggestion black
+set -U fish_color_autosuggestion gray
 set -U fish_color_command normal
 set -U fish_color_error red
 set -U fish_color_param cyan
