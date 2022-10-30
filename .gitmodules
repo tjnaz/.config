@@ -1,0 +1,3 @@
+[submodule "/Users/anaz/.config/alacritty/catppuccin"]
+	path = /Users/anaz/.config/alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty.git
