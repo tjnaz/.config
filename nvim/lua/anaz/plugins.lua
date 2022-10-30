@@ -53,6 +53,8 @@ return packer.startup(function(use)
     requires = { "tjdevries/colorbuddy.nvim" },
   })
   use("norcalli/nvim-colorizer.lua")
+  use({ "catppuccin/nvim",
+    as = "catppuccin" })
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
