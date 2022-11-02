@@ -30,15 +30,15 @@ keymap("n", "TV", ":vsplit<Return>", term_opts)
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<A-h>", "<C-w>h", opts)
-keymap("n", "<A-j>", "<C-w>j", opts)
-keymap("n", "<A-k>", "<C-w>k", opts)
-keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("n", "TH", "<C-w>h", opts)
+keymap("n", "TJ", "<C-w>j", opts)
+keymap("n", "TK", "<C-w>k", opts)
+keymap("n", "TL", "<C-w>l", opts)
 -- Resize with arrows
-keymap("n", "TK", ":resize +2<CR>", opts) -- Changed this 3/18 08:00
-keymap("n", "TJ", ":resize -2<CR>", opts)
-keymap("n", "TL", ":vertical resize -2<CR>", opts)
-keymap("n", "TH", ":vertical resize +2<CR>", opts)
+keymap("n", "<A-c-k>", ":resize +2<CR>", opts) -- Changed this 3/18 08:00
+keymap("n", "<A-c-j>", ":resize -2<CR>", opts)
+keymap("n", "<A-c-l>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-c-h>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<Tab>", ":bnext<CR>", opts)
@@ -99,6 +99,7 @@ keymap("n", "<Leader>g", ":FloatermNew lazygit<CR>", opts)
 
 --- Clang & Make Compiling
 keymap("n", "<Leader><Leader>cr", ":FloatermNew --autoclose=0 clang % -o %< && ./%<<CR>", opts)
+keymap("n", "<Leader><Leader>cs", ":FloatermNew --autoclose=0 clang % -o %< -lcs50 && ./%<<CR>", opts)
 keymap("n", "<Leader><Leader>s", ":FloatermNew --silent --name=server live-server --cors --open=%<CR>", opts)
 keymap("n", "<Leader><Leader>ks", ":FloatermKill server<CR>", opts)
 
