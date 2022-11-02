@@ -42,6 +42,10 @@ c.setup({
     nvimtree = true,
     telescope = true,
     treesitter = true,
+    indent_blankline = {
+      enabled = true,
+      colored_indent_levels = false,
+    }
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
   },
 })

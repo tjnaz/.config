@@ -94,7 +94,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   })
   use('nvim-treesitter/nvim-treesitter-context')
-  -- use("lukas-reineke/indent-blankline.nvim")
+  use("lukas-reineke/indent-blankline.nvim")
   use("windwp/nvim-autopairs")
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
