@@ -1,11 +1,6 @@
--- local status, n = pcall(require, "neosolarized")
--- if (not status) then return end
 local status, c = pcall(require, "catppuccin")
 if (not status) then return end
 
--- n.setup({
---   comment_italics = true,
--- })
 c.setup({
   flavour = "mocha", -- latte, frappe, macchiato, mocha
   background = { -- :h background
@@ -21,7 +16,7 @@ c.setup({
     percentage = 0.15,
   },
   styles = {
-    comments = { "italic" },
+    comments = { "italic", "bold" },
     conditionals = { "italic" },
     loops = {},
     functions = {},
@@ -34,8 +29,19 @@ c.setup({
     types = {},
     operators = {},
   },
-  color_overrides = {},
+  color_overrides = {
+    mocha = {
+      text = "#00FF00",
+    }
+  },
   custom_highlights = {},
+  highlight_overrides = {
+    mocha = function(mocha)
+      return {
+        Comment = { fg = mocha.flamingo },
+      }
+    end,
+  },
   integrations = {
     cmp = true,
     gitsigns = true,
@@ -52,6 +58,12 @@ c.setup({
 
 vim.api.nvim_command "colorscheme catppuccin"
 
+-- local status, n = pcall(require, "neosolarized")
+-- if (not status) then return end
+-- n.setup({
+--   comment_italics = true,
+-- })
+-- -----------
 -- local cb = require('colorbuddy.init')
 -- local Color = cb.Color
 -- local colors = cb.colors
