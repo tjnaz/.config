@@ -17,7 +17,7 @@ local options = {
   scrolloff = 10,
   shell = "zsh",
   shiftwidth = 2,
-  showcmd = true,
+  showcmd = false,
   showtabline = 2,
   si = true, -- Smart indent
   smarttab = true,
@@ -38,18 +38,17 @@ local options = {
   -- From highlights.lua
   background = "dark",
   cursorline = true,
-  -- cursorlineopt = '',
+  --cursorlineopt = '',
   pumblend = 2,
   termguicolors = true,
   wildoptions = "pum",
   winblend = 0,
   -- Personal addition
-  list = true,
-  -- guicursor = 'n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait500-blinkoff300-blinkon250-Cursor/lCursor',
-  -- guicursor = 'i-ci-ve:block,r-cr-o:hor20,a:blinkwait500-blinkoff300-blinkon250-Cursor/lCursor',
+  list = true, -- Empty characters like ROP Galadriel
+  -- Cursor
   guicursor = "n-v-c-sm-i-ci-ve:block",
   guicursor = "n-v-c:blinkon0",
-  guicursor = "i:blinkwait050-blinkoff050-blinkon050"
+  guicursor = "i:blinkwait050-blinkoff050-blinkon050",
 }
 for k, v in pairs(options) do
   vim.opt[k] = v
@@ -59,6 +58,7 @@ end
 vim.scriptencoding = "utf-8"
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
+
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -70,6 +70,19 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = "*",
   command = "set nopaste",
 })
+
+-- Not working // supposed to disable the autocommenting new lines which is a big nuisance
+-- vim.api.nvim_create_autocmd(
+--   { "BufRead", "BufNewFile" },
+--   {
+--     pattern = { "*" },
+--     command = ":set formatoptions-=cro",
+--   }
+-- )
+-- vim.cmd([["set formatoptions-=cro"]])
+-- vim.bo.formatoptions = 'jnqlr'
+-- vim.cmd([[:set formatoptions-=cro]])
+-- vim.api.nvim_command('set formatoptions-=cro')
 
 vim.cmd("set lcs=leadmultispace:\\|.")
 --vim.cmd("set highlight NonText ctermfg=16 guifg=#212121")
