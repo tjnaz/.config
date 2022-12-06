@@ -99,7 +99,16 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
-  --
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  } --
   --	--- GIT ---
   -- use("dinhhuy258/git.nvim")
   use("lewis6991/gitsigns.nvim")
