@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use({
     "ahmedkhalf/project.nvim",
   })
+  use("szw/vim-maximizer")
 
   --- CMP PLUGINS ---
   use("hrsh7th/nvim-cmp") -- Completion

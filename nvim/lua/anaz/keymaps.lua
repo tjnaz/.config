@@ -21,19 +21,22 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- From the current config
+
+-- Normal --
+-- Vertical Movement --
+keymap("n", "<c-d>", "<C-d>zz", opts)
+keymap("n", "<c-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
+-- Managing windows
 -- New tab
 keymap("n", "TE", ":tabedit<Return>", term_opts)
 -- Need to find keymap for closing tabedit windows and split panes --
--- Split window
-keymap("n", "TS", ":split<Return>", term_opts)
-keymap("n", "TV", ":vsplit<Return>", term_opts)
-
--- Normal --
+keymap("n", "<Leader><Leader>h", ":split<Return>", term_opts)
+keymap("n", "<Leader><Leader>j", ":vsplit<Return>", term_opts)
+keymap("n", "<Leader><Leader>m", ":MaximizerToggle<CR>", term_opts)
 -- Better window navigation
--- keymap("n", "TH", "<C-w>h", opts)
--- keymap("n", "TJ", "<C-w>j", opts)
--- keymap("n", "TK", "<C-w>k", opts)
--- keymap("n", "TL", "<C-w>l", opts)
 keymap("n", "<A-c-h>", "<C-w>h", opts)
 keymap("n", "<A-c-j>", "<C-w>j", opts)
 keymap("n", "<A-c-k>", "<C-w>k", opts)
@@ -48,7 +51,6 @@ keymap("n", "TL", ":vertical resize +2<CR>", opts)
 keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
-
 
 -- Insert --
 -- Press JJ fast to exit insert mode
