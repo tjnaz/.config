@@ -47,12 +47,12 @@ return packer.startup(function(use)
   use("voldikss/vim-floaterm")
   use("lewis6991/impatient.nvim")
   --- COLORSCHEMES ---
-  use({ "folke/tokyonight.nvim" })
+  --[[   use({ "folke/tokyonight.nvim" })
   use({
     "svrana/neosolarized.nvim",
     requires = { "tjdevries/colorbuddy.nvim" },
   })
-  use("norcalli/nvim-colorizer.lua")
+  use("norcalli/nvim-colorizer.lua") ]]
   use({ "catppuccin/nvim",
     as = "catppuccin" })
   --- WINDOW MANAGERS ---
