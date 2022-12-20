@@ -24,7 +24,12 @@ local options = {
   softtabstop = 2,
   tabstop = 2,
   title = true,
+
+  swapfile = false,
+  backup = false,
+  undodir = os.getenv("HOME") .. "/.vim/undodir",
   undofile = true, -- enable persistent undovim.opt.backup = false
+
   wrap = false, -- It was disabled by the 'craftzdog'
   -- From Chris configuration file
   clipboard = "unnamedplus", -- allows neovim to access the system clipboard
@@ -34,7 +39,7 @@ local options = {
   signcolumn = "yes",
   splitbelow = true,
   splitright = true,
-  updatetime = 300,
+  updatetime = 50,
   -- From highlights.lua
   background = "dark",
   cursorline = true,
@@ -58,12 +63,7 @@ end
 vim.scriptencoding = "utf-8"
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
-
-
--- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
--- Currently not working in iTerm2, maybe in the future
+vim.opt.isfname:append("@-@")
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
@@ -71,21 +71,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   command = "set nopaste",
 })
 
--- Not working // supposed to disable the autocommenting new lines which is a big nuisance
--- vim.api.nvim_create_autocmd(
---   { "BufRead", "BufNewFile" },
---   {
---     pattern = { "*" },
---     command = ":set formatoptions-=cro",
---   }
--- )
--- vim.cmd([["set formatoptions-=cro"]])
--- vim.bo.formatoptions = 'jnqlr'
--- vim.cmd([[:set formatoptions-=cro]])
--- vim.api.nvim_command('set formatoptions-=cro')
-
 vim.cmd("set lcs=leadmultispace:\\|.")
---vim.cmd("set highlight NonText ctermfg=16 guifg=#212121")
 vim.cmd("set laststatus=0")
 
 -- Add asterisk in block comments
@@ -103,3 +89,14 @@ vim.cmd([[set iskeyword+=-]])
 --- From DevOnDuty - https://www.youtube.com/watch?v=hwC4JduRHyg
 vim.g.floaterm_width = 0.95
 vim.g.floaterm_height = 0.95
+
+
+-- Kickstart Neovim
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
