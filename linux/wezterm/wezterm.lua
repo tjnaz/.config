@@ -7,10 +7,10 @@ local cusHSB = {
   saturation = 3.5,
 }
 
-wezterm.on('gui-startup', function(cmd)
+--[[ wezterm.on('gui-startup', function(cmd)
   local tab, pane, window = mux.spawn_window(cmd or {})
   window:gui_window():toggle_fullscreen()
-end)
+end) ]]
 
 wezterm.on('toggle-ligature', function(window, pane)
   local overrides = window:get_config_overrides() or {}
@@ -45,7 +45,7 @@ end)
 --   local overrides = window:get_config_overrides() or {}
 
 --   if not window_dims.is_full_screen then
---     overrides.window_background_image = "/Users/anaz/Documents/misc/background/terminal/cyberpunk-2.jpg"
+--     overrides.window_background_image = "/Users/anaz/Documents/misc/background/terminal/ring-elvis-1-png.png"
 --   end
 -- end
 
@@ -68,7 +68,7 @@ return {
   custom_block_glyphs = true,
   underline_position = -9.0,
   underline_thickness = 2.0,
-  font_size = 16.0,
+  font_size = 14.0,
   dpi = 96.0,
   audible_bell = "Disabled",
   -- Window Configurations --
@@ -96,7 +96,7 @@ return {
   --   },
   -- },
   window_background_image = "/home/anaz/Pictures/lotr.png",
-  window_background_opacity = 0.4,
+  window_background_opacity = 0.6,
   window_background_image_hsb = cusHSB,
   font = wezterm.font 'FiraCode Nerd Font',
   font_rules = {
