@@ -56,5 +56,5 @@ xkb_symbols "cpd" {
     key <AB10> { [          z,  Z               ]       };
 
     key <BKSL> { [  semicolon,  bar             ]       };
-    key <INS>  { [  grave,   greater         ]       };
+    key <LSGT>  { [  grave,   greater         ]       };
 };
