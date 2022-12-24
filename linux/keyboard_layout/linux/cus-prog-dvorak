@@ -20,7 +20,7 @@ xkb_symbols "cpd" {
     key <AE12> { [ exclam, grave,  dead_tilde] };
 
     key <AD01> { [  colon, backslash, dead_acute, dead_diaeresis       ] };
-    key <AD02> { [      comma,  quotedb1,   dead_cedilla, dead_caron        ] };
+    key <AD02> { [      apostrophe,  quotedbl,   dead_cedilla, dead_caron        ] };
     key <AD03> { [      period, asciitilde, dead_abovedot, periodcentered  ] };
     key <AD04> { [          p,  P               ]       };
     key <AD05> { [          y,  Y               ]       };
