@@ -53,8 +53,10 @@ return packer.startup(function(use)
     requires = { "tjdevries/colorbuddy.nvim" },
   })
   use("norcalli/nvim-colorizer.lua") ]]
-  use({ "catppuccin/nvim",
-    as = "catppuccin" })
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
   --- WINDOW MANAGERS ---
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
@@ -68,16 +70,16 @@ return packer.startup(function(use)
   use("szw/vim-maximizer")
 
   --- CMP PLUGINS ---
-  use("hrsh7th/nvim-cmp") -- Completion
-  use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
+  use("hrsh7th/nvim-cmp")         -- Completion
+  use("hrsh7th/cmp-buffer")       -- nvim-cmp source for buffer words
   use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline") -- Commandline completion
+  use("hrsh7th/cmp-cmdline")      -- Commandline completion
   use("saadparwaiz1/cmp_luasnip") -- For snippet completionj
-  use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in LSP
-  use("hrsh7th/cmp-nvim-lua") -- For lua completion. It's cool.
+  use("hrsh7th/cmp-nvim-lsp")     -- nvim-cmp source for neovim's built-in LSP
+  use("hrsh7th/cmp-nvim-lua")     -- For lua completion. It's cool.
 
   --- SNIPPETS ---
-  use("L3MON4D3/LuaSnip") -- Snippet
+  use("L3MON4D3/LuaSnip")             -- Snippet
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
   --- LSP ---
@@ -110,7 +112,7 @@ return packer.startup(function(use)
       }
     end
   } --
-  --	--- GIT ---
+  ---- GIT ---
   -- use("dinhhuy258/git.nvim")
   use("lewis6991/gitsigns.nvim")
 

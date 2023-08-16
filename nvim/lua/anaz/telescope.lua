@@ -19,7 +19,7 @@ telescope.setup({
     --path_display = { "smart" },
     mappings = {
       n = {
-        ["q"] = actions.close,
+            ["q"] = actions.close,
       },
     },
   },
@@ -30,16 +30,16 @@ telescope.setup({
       hijack_netrw = false,
       mappings = {
         -- your custom insert mode mappings
-        ["i"] = {
-          ["<C-w>"] = function()
+            ["i"] = {
+              ["<C-w>"] = function()
             vim.cmd("normal vbd")
           end,
         },
-        ["n"] = {
+            ["n"] = {
           -- your custom normal mode mappings
-          ["N"] = fb_actions.create,
-          ["h"] = fb_actions.goto_parent_dir,
-          ["/"] = function()
+              ["N"] = fb_actions.create,
+              ["h"] = fb_actions.goto_parent_dir,
+              ["/"] = function()
             vim.cmd("startinsert")
           end,
         },
@@ -76,7 +76,7 @@ end)
 vim.keymap.set("n", ";g", function()
   builtin.git_commits()
 end)
-vim.keymap.set({ "v", "n" }, "LF", function()
+vim.keymap.set({ "v", "n" }, "LL", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),

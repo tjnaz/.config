@@ -3,7 +3,8 @@ if (not status) then return end
 
 c.setup({
   flavour = "mocha", -- latte, frappe, macchiato, mocha
-  background = { -- :h background
+  background = {
+    -- :h background
     light = "latte",
     dark = "mocha",
   },
@@ -16,10 +17,10 @@ c.setup({
     percentage = 0.15,
   },
   styles = {
-    comments = { "italic", "bold" },
+    comments = { "standout" },
     conditionals = { "italic" },
     loops = {},
-    functions = {},
+    functions = { "bold" },
     keywords = {},
     strings = {},
     variables = {},
