@@ -1,0 +1,59 @@
+# Parts of this config were created by Derek Taylor, AKA DistroTube. The rest was created by Matt Weber aka The Linux Cast
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
+shell:
+  program: /usr/bin/bash
+font:
+  size: 10
+  offset:
+    y: 0
+  normal:
+    family: "FiraCode Nerd Font"
+  italic:
+    family: "Cascadia Code"
+  AppleFontSmoothing: true
+
+window:
+  padding:
+    x: 7
+    y: 7
+  decorations: none
+  opacity: 0
+  dimensions:
+    columns: 220
+    lines: 60
+  startup_mode: windowed
+
+render_timer: false
+
+cursor:
+  unfocused_hollow: true
+  style:
+    blinking: On
+
+env:
+  TERM: xterm-256color
+
+scrolling:
+  history: 12000
+  auto_scroll: true
+  multiplier: 5
+
+mouse:
+  hide_when_typing: true
+
+live_config_reload: true
+
+colors:
+  # Cursor colors
+  cursor:
+    text: "#1E1E2E" # base
+    cursor: "#00FF00"
+  vi_mode_cursor:
+    text: "#1E1E2E" # base
+    cursor: "#B4BEFE" # lavender

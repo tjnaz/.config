@@ -95,8 +95,16 @@ return {
   --     opacity = 0.5,
   --   },
   -- },
+<<<<<<< HEAD
   window_background_image = "/Users/anaz/Documents/life/misc/background/terminal/ring-elvis-1-png.png",
   window_background_opacity = 0.7,
+||||||| parent of 2d0d0ca (add: new back up)
+  window_background_image = "/Users/anaz/Documents/life/misc/background/terminal/ring-elvis-1-png.png",
+  window_background_opacity = 0.4,
+=======
+  -- window_background_image = "/Users/anaz/Documents/life/misc/background/terminal/ring-elvis-1-png.png",
+  window_background_opacity = 0.4,
+>>>>>>> 2d0d0ca (add: new back up)
   window_background_image_hsb = cusHSB,
   font = wezterm.font 'IntelOne Mono',
   font_rules = {
